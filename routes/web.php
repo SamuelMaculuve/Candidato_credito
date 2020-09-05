@@ -21,3 +21,7 @@ Route::get('reprovados', 'CandidatoController@reprovados');
 Route::get('pedentes', 'CandidatoController@pedentes');
 Route::resource('gestor', 'GestorController');
 Route::get('/', 'HomeController@home')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

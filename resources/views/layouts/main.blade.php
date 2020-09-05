@@ -69,6 +69,10 @@
                             <i class="fas fa-table"></i>Gestor</a>
                     </li>
                     <li>
+                        <a href="http://127.0.0.1:8000/register">
+                            <i class="fas fa-table"></i>Usuarios</a>
+                    </li>
+                    <li>
 
                         <a href="{{ route('logout') }}"
                            onclick="event.preventDefault();
