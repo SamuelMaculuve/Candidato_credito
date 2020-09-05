@@ -20,7 +20,7 @@ Route::get('aprovados', 'CandidatoController@aprovados');
 Route::get('reprovados', 'CandidatoController@reprovados');
 Route::get('pedentes', 'CandidatoController@pedentes');
 Route::resource('gestor', 'GestorController');
-Route::get('/', 'HomeController@home')->name('home');
+Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
