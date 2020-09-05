@@ -42,8 +42,8 @@
         <div class="header-mobile__bar">
             <div class="container-fluid">
                 <div class="header-mobile-inner">
-                    <a class="logo" href="index.html">
-                        <img src="images/icon/logo.png" alt="CoolAdmin" />
+                    <a class="logo" href="/">
+                        excellentesolutions
                     </a>
                     <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -94,8 +94,8 @@
     <!-- MENU SIDEBAR-->
     <aside class="menu-sidebar d-none d-lg-block">
         <div class="logo">
-            <a href="#">
-                <img src="images/icon/logo.png" alt="Cool Admin" />
+            <a href="/">
+                <h1>E<span>.</span>S</h1>
             </a>
         </div>
         <div class="menu-sidebar__content js-scrollbar1">
@@ -112,6 +112,10 @@
                     <li>
                         <a href="{{route('gestor.index')}}">
                             <i class="fas fa-table"></i>Gestor</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('register') }}">
+                            <i class="fas fa-table"></i>Usuarios</a>
                     </li>
                     <li>
 
@@ -163,24 +167,13 @@
                                             </div>
                                             <div class="content">
                                                 <h5 class="name">
-                                                    <a href="#">john doe</a>
+                                                    <a href="#">{{ Auth::user()->name }}</a>
                                                 </h5>
-                                                <span class="email">johndoe@example.com</span>
+                                                <span class="email">{{ Auth::user()->email }}</span>
                                             </div>
                                         </div>
                                         <div class="account-dropdown__body">
-                                            <div class="account-dropdown__item">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-account"></i>Account</a>
-                                            </div>
-                                            <div class="account-dropdown__item">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-settings"></i>Setting</a>
-                                            </div>
-                                            <div class="account-dropdown__item">
-                                                <a href="#">
-                                                    <i class="zmdi zmdi-money-box"></i>Billing</a>
-                                            </div>
+
                                         </div>
                                         <div class="account-dropdown__footer">
                                             <a href="{{ route('logout') }}"
