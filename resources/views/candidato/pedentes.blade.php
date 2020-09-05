@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-md-12">
         <!-- DATA TABLE -->
-        <h3 class="title-5 m-b-35">Candidatos à Financiamento Bancário</h3>
+        <h3 class="title-5 m-b-35">Candidatos à Financiamento Bancário Pedentes</h3>
         <div class="table-data__tool">
             <div class="table-data__tool-left">
                <a href="/aprovados">
@@ -37,7 +37,7 @@
                 <tr>
                     <th>
                         <label class="au-checkbox">
-                            <input type="checkbox" value="true">
+                            <input type="checkbox">
                             <span class="au-checkmark"></span>
                         </label>
                     </th>

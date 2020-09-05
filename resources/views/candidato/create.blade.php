@@ -82,11 +82,11 @@
                                 <label for="select" class=" form-control-label">Gestor</label>
                             </div>
                             <div class="col-12 col-md-9">
-                                <select name="gestor_id" id="select" class="form-control">
+                                <select name="gestor_id" id="select" class="form-control" required>
 
-                                    <option value="0">Please select</option>
+                                    <option value="0" required>Please select</option>
                                     @foreach($gestores as $gestor)
-                                        <option value="{{ $gestor->id }}">{{ $gestor->nome }}</option>
+                                        <option value="{{ $gestor->id }}" required>{{ $gestor->nome }}</option>
                                     @endforeach
 
                                 </select>

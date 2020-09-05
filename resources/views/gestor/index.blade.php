@@ -41,6 +41,9 @@
                     </div>
                 </div>
             </div>
+            @if (session('message'))
+                @include('alerts.sucess-messages')
+            @endif
             <div class="table-responsive table-responsive-data2">
                 <table class="table table-data2">
                     <thead>

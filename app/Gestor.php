@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gestor extends Model
 {
-    public function candidado()
+    public function candidato()
     {
-        return $this->hasOne('App\Candidado');
+        return $this->hasOne('App\Candidato');
     }
 }

@@ -37,12 +37,12 @@ class GestorController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nome'          => 'required|min:2|max:50',
-            'telefone'   => 'nullable|min:5'  ,
-            'naturaldade'          => 'nullable|min:2|max:50',
-            'estado_civil'   => 'nullable|min:5',
-            'residencia'   => 'nullable|min:5',
-            'data_nascimento'   => 'nullable|min:5'
+            'nome'         => '',
+            'telefone'       => '',
+            'naturaldade'   => '',
+            'estado_civil'    => '',
+            'residencia'         => '',
+            'data_nascimento'  => '',
         ]);
 
         $gestor = new Gestor();
@@ -91,25 +91,18 @@ class GestorController extends Controller
      */
     public function update(Request $request, Gestor $gestor)
     {
-//        $request->validate([
-//            'nome'          => 'required|min:2|max:50',
-//            'telefone'   => 'nullable|min:5'  ,
-//            'naturaldade'          => 'nullable|min:2|max:50',
-//            'estado_civil'   => 'nullable|min:5',
-//            'residencia'   => 'nullable|min:5',
-//            'data_nascimento'   => 'nullable|min:5'
-//        ]);
+        $request->validate([
+            'nome'         => '',
+            'telefone'       => '',
+            'naturaldade'   => '',
+            'estado_civil'    => '',
+            'residencia'         => '',
+            'data_nascimento'  => '',
+        ]);
 
-        $gestor = new Gestor();
+        Gestor::where('id', $gestor->id)
+            ->update($request->only(['nome', 'telefone', 'naturaldade', 'estado_civil', 'residencia', 'data_nascimento']));
 
-        $gestor->nome         = $request->nome;
-        $gestor->telefone  = $request->telefone;
-        $gestor->naturaldade         = $request->naturaldade;
-        $gestor->estado_civil  = $request->estado_civil;
-        $gestor->residencia  = $request->residencia;
-        $gestor->data_nascimento  = $request->data_nascimento;
-//        $gestor->user_id      = auth()->id();
-        $gestor->save();
 
         return redirect()->back()->with(['message' => 'Gestor ('.$gestor->nome.') actualizada com sucesso.']);
     }

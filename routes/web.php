@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/candidatos','CandidatoController@index');
-
-
 Auth::routes();
-//Route::get('/welcome', 'CandidatoController@welcome')-> name (welcome);
+//Route::get('/welcome', 'CandidadoController@welcome')-> name (welcome);
 Route::resource('candidato', 'CandidatoController');
+Route::get('aprovados', 'CandidatoController@aprovados');
+Route::get('reprovados', 'CandidatoController@reprovados');
+Route::get('pedentes', 'CandidatoController@pedentes');
 Route::resource('gestor', 'GestorController');
 Route::get('/', 'HomeController@home')->name('home');
